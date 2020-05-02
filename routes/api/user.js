@@ -45,12 +45,14 @@ router.post(
         d: 'mm',
       });
 
-      user = new User({
+      const userObject = {
         name,
         email,
         password,
         avatar,
-      });
+      };
+
+      user = new User(userObject);
 
       let salt = await bcryptjs.genSalt(10);
 
