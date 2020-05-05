@@ -7,6 +7,8 @@ import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Register from './components/auth/Register';
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/profile-forms/CreateProfile';
+import EditProfile from './components/profile-forms/EditProfile';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 //Redux
@@ -15,9 +17,9 @@ import store from './store';
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
 
-/*if (localStorage.token) {
+if (localStorage.token) {
   setAuthToken(localStorage.token);
-}*/
+}
 
 const App = () => {
   useEffect(() => {
@@ -40,6 +42,16 @@ const App = () => {
                 exact
                 path='/dashboard'
                 component={Dashboard}
+              ></PrivateRoute>
+              <PrivateRoute
+                exact
+                path='/create-profile'
+                component={CreateProfile}
+              ></PrivateRoute>
+              <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={EditProfile}
               ></PrivateRoute>
             </Switch>
           </section>

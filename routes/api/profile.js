@@ -43,6 +43,7 @@ router.post(
     ],
   ],
   async (req, res) => {
+    console.log('inside api');
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
@@ -95,6 +96,7 @@ router.post(
         { $set: profileFields },
         { new: true, upsert: true }
       );
+      console.log(`returning data now ${profile}`);
       res.json(profile);
     } catch (err) {
       console.error(err.message);
