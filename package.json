@@ -20,8 +20,11 @@
     "express-validator": "^6.4.0",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.28",
     "mongoose": "^5.9.10",
     "normalize-url": "^5.0.0",
+    "react": "^16.13.1",
+    "react-moment": "^0.9.7",
     "request": "^2.88.2"
   },
   "devDependencies": {

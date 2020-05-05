@@ -8,7 +8,7 @@ const config = require('config');
 // bring in normalize to give us a proper url, regardless of what user entered
 const normalize = require('normalize-url');
 const User = require('../../model/User');
-//const Post = require('../../model/Post');
+const Post = require('../../model/Post');
 
 // @route GET api/profile/me
 // @desc  Get current user profile
@@ -142,7 +142,7 @@ router.get('/user/:user_id', async (req, res) => {
 router.delete('/', auth, async (req, res) => {
   try {
     // Remove user posts
-    // await Post.deleteMany({ user: req.user.id });
+    await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
