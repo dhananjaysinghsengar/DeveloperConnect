@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const DashboardAction = (props) => {
@@ -17,7 +16,5 @@ const DashboardAction = (props) => {
     </div>
   );
 };
-
-DashboardAction.propTypes = {};
 
 export default DashboardAction;

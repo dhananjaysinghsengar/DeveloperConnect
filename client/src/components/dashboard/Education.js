@@ -39,8 +39,8 @@ const Education = ({ education, deleteEducation }) => {
             <th className='hide-sm'>Years</th>
             <th></th>
           </tr>
-          <tbody>{education}</tbody>
         </thead>
+        <tbody>{educations}</tbody>
       </table>
     </Fragment>
   );

@@ -39,8 +39,8 @@ const Experience = ({ experience, deleteExperience }) => {
             <th className='hide-sm'>Years</th>
             <th></th>
           </tr>
-          <tbody>{experiences}</tbody>
         </thead>
+        <tbody>{experiences}</tbody>
       </table>
     </Fragment>
   );
