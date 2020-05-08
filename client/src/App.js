@@ -18,6 +18,8 @@ import { Provider } from 'react-redux'; //package combines react and redux featu
 import store from './store';
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
+import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -40,6 +42,8 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register}></Route>
               <Route exact path='/login' component={Login}></Route>
+              <Route exact path='/profiles' component={Profiles}></Route>
+              <Route exact path='/profile/:id' component={Profile}></Route>
               <PrivateRoute
                 exact
                 path='/dashboard'
