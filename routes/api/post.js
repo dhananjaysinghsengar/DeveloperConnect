@@ -186,9 +186,10 @@ router.post(
 // @route    DELETE api/posts/comment/:id/:comment_id
 // @desc     Delete comment
 // @access   Private
-router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
+router.delete('/comment/:post_id/:comment_id', auth, async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    console.log('inside delete comment backend service');
+    const post = await Post.findById(req.params.post_id);
 
     // Pull out comment
     const comment = post.comments.find(
